@@ -19,7 +19,9 @@ class Search extends CI_Controller{
                 }
         }
     }
-
+/*
+ * @info selecionando todos os conteudos para a home  
+ */
     public function search_all(){
         $title=$this->input->get('busca_home');
         $data['data']=$this->news_model->search_one($title);
