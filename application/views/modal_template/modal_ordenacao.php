@@ -100,8 +100,8 @@
 
             </div>
             <!-- /.box-header -->
-            <div class="box-body table-responsive no-padding">
-              <table class="table table-hover">
+            <div class="box-body no-padding">
+              <table class="table table-striped">
                 <tbody>
                     <tr>
                         <th>Nome da ordenação</th>
