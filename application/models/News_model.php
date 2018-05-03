@@ -206,12 +206,13 @@ class News_model extends CI_Model {
         $this->db->join('man_categoria', 'man_categoria.id_ct = conteudo_c.categoria_fk_c');
         $this->db->group_by("id_ct");
         $this->db->order_by('id_ct', 'DESC');
-        $this->db->where('revisar_publicado !=', '0');
+        $this->db->where('revisar_publicado !=', NULL);
         $query = $this->db->get();
         return $query->result_array();
     }
     /*
      * Sleciona os dados para o view categorias_view
+     * Aba categorias lateral
      * Controller Welcome
      */
     public function view_categoria_site($id) {
@@ -256,8 +257,9 @@ class News_model extends CI_Model {
         $this->db->select('*');
         $this->db->from('man_titulo');
         $this->db->join('man_ordenacao', ' man_ordenacao.id_ordenacao = man_titulo.id_ordenacao_fk');
+        $this->db->join('conteudo_c', ' conteudo_c.titulo_c = man_titulo.id_titulo');
         $this->db->order_by('posicao_titulo', 'DESC');
-        $this->db->where('id_categoria_fk', $id);
+        $this->db->where('categoria_fk_c', $id);
         $query = $this->db->get();
         return $query->result_array();
     }
@@ -282,7 +284,7 @@ class News_model extends CI_Model {
         $this->db->select('*');
         $this->db->from('conteudo_c');
         $this->db->join('man_titulo', 'man_titulo.id_titulo = conteudo_c.titulo_c');
-        $this->db->where('id_c', $id);
+        $this->db->where('id_titulo', $id);
         return $query = $this->db->get()->result();
     }
     
