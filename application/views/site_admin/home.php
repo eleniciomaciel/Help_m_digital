@@ -45,7 +45,7 @@
                                 <td><?php 
                                         if($dd->revisar_publicado == '1') {
                                             echo $dd->revisar_publicado = '<span class="badge bg-blue">Publicado!</span>';
-                                        }elseif ($dd->revisar_publicado == '0') {
+                                        }elseif ($dd->revisar_publicado == NULL) {
                                             echo $dd->revisar_publicado = '<span class="badge bg-red">Em revisão!</span>';
                                         }
                                     ;?>
@@ -195,20 +195,12 @@
                           <textarea class="form-control" id="assunt_cont" name="assunt_cont" rows="6" placeholder="Digite aqui um assunto..."></textarea>
                         </div>
                       <!-- /.form group -->
-                      <div class="form-group">
-                          <div class="radio">
-                            <label>
-                              <input type="radio" name="status_cont" id="status_cont" value="1" <?php echo  set_radio('status_cont', '1'); ?> />
-                              Publicar
-                            </label>
-                          </div>
-                          <div class="radio">
-                            <label>
-                                <input type="radio" name="status_cont" id="status_cont" value="0" <?php echo  set_radio('status_cont', '0'); ?> />
-                              Revisão
-                            </label>
-                          </div>
-                        </div>
+                      <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="status_cont" value="1" <?php echo set_checkbox('status_cont', '1'); ?> /> Publicar?
+                        </label>
+                      </div>
+                      
 
                       <input type="hidden" name="id_cont" id="id_cont">
                       

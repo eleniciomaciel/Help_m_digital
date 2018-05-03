@@ -41,7 +41,7 @@ class Conteudo extends CI_Controller
             $this->form_validation->set_rules('descri_cont', 'Descrição', 'required|max_length[150]');
             $this->form_validation->set_rules('catego_cont', 'categoria', 'required');
             $this->form_validation->set_rules('assunt_cont', 'Conteúdo', 'required|min_length[3]');
-            $this->form_validation->set_rules('status_cont', 'Revisão', 'required');
+            //$this->form_validation->set_rules('status_cont', 'Revisão', 'required');
 
 
             if ($this->form_validation->run() == FALSE){
