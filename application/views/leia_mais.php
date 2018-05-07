@@ -1,8 +1,8 @@
-<?php $this->load->view('site_template/head');?>
+<?php $this->load->view('site_template/head_blog');?>
 <?php $this->load->view('site_template/navbar');?>
 
     <main role="main">
-
+        <br><br>
 <section class="jumbotron text-center">
     <div class="container">
       <h1 class="jumbotron-heading">Suporte online</h1>

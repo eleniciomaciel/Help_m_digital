@@ -1,9 +1,9 @@
-<?php $this->load->view('site_template/head');?>
+<?php $this->load->view('site_template/head_blog');?>
 <?php $this->load->view('site_template/navbar');?>
-
-<main role="main" class="container">
+<main role="main">
     <section class="jumbotron text-center">
     <div class="container">
+        <br>
       <h1 class="jumbotron-heading">Suporte online</h1>
 
       <form id="form_search" action="<?php echo site_url('search/search_all');?>" method="GET">
@@ -76,7 +76,16 @@
     </main>
 
 <!-- /.row ////////////////////////////////////////////////////////////////////////////////////////***********************************************-->
-<?php $this->load->view('site_template/footer-html');?>
+<footer class="blog-footer">
+       <p>2018 &copy; Todos os direitos reservados<a href="#" title=""> Município Digital Tecnologia</a></p>
+      <p>
+          <a href="#">
+              <button type="button" class="btn btn-warning">
+              <i class="material-icons">vertical_align_top</i> Topo
+            </button>
+          </a>
+      </p>
+    </footer>
 
 <?php $this->load->view('site_template/footer');?>
 

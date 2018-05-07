@@ -50,54 +50,37 @@
        <form class="needs-validation" novalidate="" id="form_my_help">
            <div class="alert alert-danger print-error-msg" style="display:none"></div>
             <div class="row">
+                
               <div class="col-md-6 mb-3">
                 <label for="firstName"><i class="material-icons">person</i> Nome:</label>
                 <input type="text" class="form-control" name="firstName_home" id="firstName_home" placeholder="Ex.: Ana">
               </div>
+                
               <div class="col-md-6 mb-3">
                 <label for="lastName"><i class="material-icons">local_library</i> Cargo:</label>
                 <input type="text" class="form-control" name="cargo_home" id="cargo_home" placeholder="Ex.: Diretora">
               </div>
+                
             </div>
 
             <div class="mb-3">
-              <label for="email_user_home">Email:</label>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="material-icons">contact_mail</i></span>
-                </div>
-                  <input type="email" class="form-control" name="email_user_home" id="email_user_home" placeholder="Ex.: eu@escola.com">
-              </div>
+              <label for="email_user_home"><i class="material-icons">contact_mail</i> Email:</label>
+              <input type="email" class="form-control" name="email_user_home" id="email_user_home" placeholder="Ex.: eu@escola.com">
             </div>
 
             <div class="mb-3">
-              <label for="Institution_home">Instituição:</label>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="material-icons">account_balance</i></span>
-                </div>
-                  <input type="text" class="form-control" name="Institution_home" id="Institution_home" placeholder="Ex.: Escola saber">
-              </div>
+              <label for="Institution_home"><i class="material-icons">account_balance</i> Instituição:</label>
+              <input type="text" class="form-control" name="Institution_home" id="Institution_home" placeholder="Ex.: Escola saber">
             </div>
 
             <div class="mb-3">
-              <label for="phone_home">Telefone:</label>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="material-icons">call</i></span>
-                </div>
-                  <input type="text" class="form-control" name="phone_home" id="phone_home">
-              </div>
+              <label for="phone_home"><i class="material-icons">call</i> Telefone:</label>
+              <input type="text" class="form-control" name="phone_home" id="phone_home">
             </div>
            
             <div class="mb-3">
-              <label for="phone_home">Assunto:</label>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="material-icons">format_color_text</i></span>
-                </div>
-                  <input type="text" class="form-control" name="assunto_home" id="assunto_home">
-              </div>
+              <label for="phone_home"><i class="material-icons">format_color_text</i> Assunto:</label>
+              <input type="text" class="form-control" name="assunto_home" id="assunto_home">
             </div>
 
             <div class="mb-3">
@@ -109,15 +92,23 @@
 
             <h4 class="mb-3"><i class="material-icons">favorite</i> Já é nosso cliente?</h4>
 
+            
             <div class="d-block my-3">
+                
               <div class="custom-control custom-radio">
-                  <input id="credit" name="cliente_home" id="cliente_home" value="Sim" type="radio" class="custom-control-input" checked="" required="">
-                <label class="custom-control-label" for="credit">Sim</label>
+                    <input class="form-check-input" type="radio" name="cliente_home" id="cliente_home" value="Sim" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                        Sim
+                    </label>
               </div>
+                
               <div class="custom-control custom-radio">
-                  <input id="debit" name="cliente_home" id="cliente_home" value="Não" type="radio" class="custom-control-input" required="">
-                <label class="custom-control-label" for="debit">Não</label>
+                <input class="form-check-input" type="radio" name="cliente_home" id="cliente_home" value="Não">
+                    <label class="form-check-label" for="exampleRadios1">
+                        Não
+                    </label>
               </div>
+                
             </div>
             
             <div class="alert alert-success success-msg_home" role="alert" style="display:none"></div>

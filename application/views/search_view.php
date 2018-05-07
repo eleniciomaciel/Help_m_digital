@@ -21,7 +21,6 @@
     </div>
 </section>
 
-        <main role="main" class="container">
       <div class="row">
           <!-- //.inicio do laço -->
           
@@ -30,7 +29,8 @@
         <?php foreach($data as $row):?>   
         <div class="col-md-8 blog-main">
           <h3 class="pb-3 mb-4 font-italic border-bottom">
-            <?php echo $row->nome_titulo;?> 
+            <?php echo $row->nome_titulo;?> <br>
+            <small style="font-size: 15px;">Acesso ao menu: colocar o nome da categoria</small>
           </h3>
 
           <div class="blog-post">
@@ -74,8 +74,5 @@
       </div><!-- /.row -->
 
     </main>
-    </main>
-
 <?php $this->load->view('site_template/footer-html');?>
-
 <?php $this->load->view('site_template/footer');?>
